@@ -10,14 +10,27 @@ public class Tests {
 
 
     @Test
-    public void Test() {
-        OddEvenWeek week = new OddEvenWeek(1, 9, 2022, 26, 12, 2022);
+    public void Test1() {
+        OddEvenWeek week = new OddEvenWeek(20, 30, 2022, 2022);
         Assert.assertEquals(2, week.Check());
-        OddEvenWeek week2 = new OddEvenWeek(1, 9, 2022, 25, 12, 2022);
-        Assert.assertEquals(1, week2.Check());
-        OddEvenWeek week3 = new OddEvenWeek(1, 9, 2021, 26, 12, 2022);
-        Assert.assertEquals(0, week.Check());
+
 
     }
+    @Test
+    public void Test2() {
+
+        OddEvenWeek week2 = new OddEvenWeek(20, 31, 2022, 2022);
+        Assert.assertEquals(1, week2.Check());
+
+
+    }
+    @Test
+    public void Test3() {
+
+        OddEvenWeek week3 = new OddEvenWeek(20, 31, 2022, 2021);
+        Assert.assertEquals(0, week3.Check());
+
+    }
+
 
 }
